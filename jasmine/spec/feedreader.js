@@ -108,10 +108,11 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, function() {   //loading the feed first time
             oldContent = $('.feed').html();
-            });
-            loadFeed(1,done);          //loading the feed again
-            newContent = $('.feed').html();
             done();
+            });
+            loadFeed(1,function() {    //loading the feed again
+            newContent = $('.feed').html();
+            });
         }); 
 
         it('Content in the container changes when new feed is loaded', function() {
