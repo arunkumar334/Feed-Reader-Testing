@@ -90,7 +90,7 @@ $(function() {
         });
 
         it('atleast one Element is present in the feed container after loading loadFeed()', function(){
-            var entryElement = $('.feed').size();
+            var entryElement = $('.feed.entry').size();
             expect(entryElement).not.toBe(0);
         }); 
     });     
@@ -114,9 +114,8 @@ $(function() {
             done();
         }); 
 
-        it('Content in the container changes when new feed is loaded', function(done) {
+        it('Content in the container changes when new feed is loaded', function() {
             expect(oldContent).not.toEqual(newContent);
-            done();
         });
     });
          
