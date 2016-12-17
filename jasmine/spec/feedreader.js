@@ -105,12 +105,12 @@ $(function() {
         var oldContent;
         var newContent;
         beforeEach(function(done) {
-            loadFeed(0, function() { //loading the feed first time
+            loadFeed(0, function() {                 //loading the feed first time
                 oldContent = $('.feed').html();
-                loadFeed(1, function() { //loading the feed again
+                loadFeed(1, function() {             //loading the feed again
                     newContent = $('.feed').html();
+                    done();
                 });
-                done();
             });
         });
 
